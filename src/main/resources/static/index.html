@@ -1,11 +1,15 @@
 <!doctype html>
-<!--[if lt IE 7]>      <html lang="en" ng-app="app" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if lt IE 7]>
+<html lang="en" ng-app="app" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 
-<!--[if IE 7]>         <html lang="en" ng-app="app" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 7]>
+<html lang="en" ng-app="app" class="no-js lt-ie9 lt-ie8"> <![endif]-->
 
-<!--[if IE 8]>         <html lang="en" ng-app="app" class="no-js lt-ie9"> <![endif]-->
+<!--[if IE 8]>
+<html lang="en" ng-app="app" class="no-js lt-ie9"> <![endif]-->
 
-<!--[if gt IE 8]><!--> <html lang="en" ng-app="app" class="no-js"> <!--<![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" ng-app="app" class="no-js"> <!--<![endif]-->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,8 +21,9 @@
 </head>
 <body ng-app="app">
 <div class="jumbotron">
-    <h2>System zarządzania pacjentami</h2></div>
-
+    <h2>System zarządzania pacjentami</h2>
+    <img class="image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/NFZ_logo.svg/1280px-NFZ_logo.svg.png" alt="nfz">
+</div>
 <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
     <div class="container-fluid">
         <div class="navbar-header">
@@ -28,14 +33,16 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pacjenci<span class="caret"></span></a>
+                    <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">Pacjenci<span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="#/patients/add">Dodaj pacjenta</a></li>
                         <li><a href="#/patients">Lista pacjentów</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Badania<span class="caret"></span></a>
+                    <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">Badania<span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="#/examinations/add">Dodaj badanie</a></li>
                         <li><a href="#/examinations">Lista badań</a></li>
@@ -48,6 +55,7 @@
         </div>
     </div>
 </nav>
+
 
 <div ng-view></div>
 

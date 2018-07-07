@@ -29,3 +29,8 @@ p.error {
     color: #FF0000
 }
 
+.image{
+    height: 100px;
+    position: absolute; right: 30px; top: 50px;
+}
+
