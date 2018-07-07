@@ -18,6 +18,5 @@ angular.module('appointment-add')
                 //     return patientService.get($route.current.params.patientId);
                 // }
             }
-
         });
     });
