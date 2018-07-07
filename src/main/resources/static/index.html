@@ -1,0 +1,105 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="app" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+
+<!--[if IE 7]>         <html lang="en" ng-app="app" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+
+<!--[if IE 8]>         <html lang="en" ng-app="app" class="no-js lt-ie9"> <![endif]-->
+
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="app" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>My AngularJS App</title>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>-->
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/app.css">
+</head>
+<body ng-app="app">
+<div class="jumbotron">
+    <h2>System zarządzania pacjentami</h2></div>
+
+<nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">System</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pacjenci<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#/patients/add">Dodaj pacjenta</a></li>
+                        <li><a href="#/patients">Lista pacjentów</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Badania<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#/examinations/add">Dodaj badanie</a></li>
+                        <li><a href="#/examinations">Lista badań</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Kalendarz wizyt</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div ng-view></div>
+
+<script src="/webjars/jquery/2.2.4/jquery.js"></script>
+<script src="/webjars/bootstrap/3.3.6/js/bootstrap.js"></script>
+<script src="/webjars/angularjs/1.4.9/angular.js"></script>
+<script src="/webjars/angularjs/1.4.9/angular-resource.js"></script>
+<script src="/webjars/angularjs/1.4.9/angular-route.js"></script>
+
+<script src="/appointment/appointment.module.js"></script>
+<script src="/appointment/appointment.service.js"></script>
+
+<script src="/appointment-list/appointment-list.module.js"></script>
+<script src="/appointment-list/appointment-list.controller.js"></script>
+<script src="/appointment-list/appointment-list.routes.js"></script>
+
+<script src="/appointment-add/appointment-add.module.js"></script>
+<script src="/appointment-add/appointment-add.controller.js"></script>
+<script src="/appointment-add/appointment-add.routes.js"></script>
+
+<script src="/patient/patient.module.js"></script>
+<script src="/patient/patient.service.js"></script>
+
+<script src="/patient-view/patient-view.module.js"></script>
+<script src="/patient-view/patient-view.controller.js"></script>
+<script src="/patient-view/patient-view.routes.js"></script>
+
+<script src="/patient-list/patient-list.module.js"></script>
+<script src="/patient-list/patient-list.controller.js"></script>
+<script src="/patient-list/patient-list.routes.js"></script>
+
+<script src="/patient-add/patient-add.module.js"></script>
+<script src="/patient-add/patient-add.controller.js"></script>
+<script src="/patient-add/patient-add.routes.js"></script>
+
+<script src="/examination/examination.module.js"></script>
+<script src="/examination/examination.service.js"></script>
+
+<script src="/examination-view/examination-view.module.js"></script>
+<script src="/examination-view/examination-view.controller.js"></script>
+<script src="/examination-view/examination-view.routes.js"></script>
+
+<script src="/examination-list/examination-list.module.js"></script>
+<script src="/examination-list/examination-list.controller.js"></script>
+<script src="/examination-list/examination-list.routes.js"></script>
+
+<script src="/examination-add/examination-add.module.js"></script>
+<script src="/examination-add/examination-add.controller.js"></script>
+<script src="/examination-add/examination-add.routes.js"></script>
+
+<script src="/app.js"></script>
+<link rel="stylesheet" href="/webjars/bootstrap/3.3.6/css/bootstrap.css">
+
+</body>
+</html>

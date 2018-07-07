@@ -1,0 +1,1 @@
+angular.module('appointment-list', ['ngRoute', 'appointment']);

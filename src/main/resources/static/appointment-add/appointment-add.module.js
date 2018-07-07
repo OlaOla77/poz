@@ -1,0 +1,1 @@
+angular.module('appointment-add', ['ngRoute', 'appointment', 'examination', 'patient'])

@@ -1,0 +1,1 @@
+angular.module('examination-view', ['ngRoute', 'examination']);

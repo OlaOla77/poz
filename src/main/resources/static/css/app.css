@@ -1,0 +1,31 @@
+body {
+    padding: 1%;
+}
+
+.header{
+    color: cornflowerblue;
+    padding-left: 5%;
+}
+
+.product{
+    padding-left: 5%;
+}
+
+.table-striped{
+    margin: 0 auto; text-align: left;
+    /*position: absolute; left: 20%;*/
+}
+
+.jumbotron {
+    padding-left: 1%;
+}
+
+.section {
+    margin-left: 5%;
+    float: left;
+}
+
+p.error {
+    color: #FF0000
+}
+

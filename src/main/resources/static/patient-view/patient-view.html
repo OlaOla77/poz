@@ -1,0 +1,19 @@
+<form name="patient-form" ng-submit="controller.update()">
+    <div class="form-group">
+        <label for="patient-name">Imię pacjenta</label>
+        <input style="width: 400px;" class="form-control" id="patient-name" ng-model="controller.patient.name"/>
+    </div>
+    <div class="form-group">
+        <label for="patient-surname">Nazwisko pacjenta</label>
+        <input style="width: 400px;" class="form-control" id="patient-surname" ng-model="controller.patient.surname"/>
+    </div>
+    <div class="form-group">
+        <label for="patient-pesel">Pesel</label>
+        <input style="width: 400px;" class="form-control" id="patient-pesel" ng-model="controller.patient.pesel"/>
+    </div>
+    <div class="form-group">
+        <label for="patient-contact">Kontakt</label>
+        <input style="width: 400px;" class="form-control" id="patient-contact" ng-model="controller.patient.contact"/>
+    </div>
+    <button class="btn btn-info" type="submit">Zapisz</button>
+</form>

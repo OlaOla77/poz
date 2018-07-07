@@ -1,0 +1,1 @@
+angular.module('examination-list', ['ngRoute', 'examination']);

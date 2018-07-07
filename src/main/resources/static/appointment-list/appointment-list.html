@@ -1,0 +1,37 @@
+<h3>Pacjent: Imię nazwisko pacjenta</h3>
+<div>
+    <br>
+</div>
+<button class="btn btn-info" ng-click="controller.goToAddAppointments()">Dodaj wizytę</button>
+<div>
+    <br>
+</div>
+<div class="section">
+    <div>
+        <br>
+    </div>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Data</th>
+            <th>Opis</th>
+            <th>Zlecone badania</th>
+            <th>Opcje</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat-start="appointment in controller.appointmentList">
+            <td>{{appointment.date | date}}</td>
+            <td>{{appointment.description}}</td>
+            <td></td>
+            <td>
+                <button class="btn btn-info" ng-click="controller.viewAppointment(appointment.id)">Edytuj</button>
+                <button class="btn btn-danger" ng-click="controller.deleteAppointment(appointment.id)">Usuń</button>
+            </td>
+        </tr>
+        <tr ng-repeat="examination in appointment.examinationList" ng-repeat-end>
+            <td>{{examination.name}}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>

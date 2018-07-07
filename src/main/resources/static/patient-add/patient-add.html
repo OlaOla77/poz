@@ -1,0 +1,37 @@
+<h3>Dodawanie pacjenta</h3>
+<div class="section">
+    <div>
+        <br>
+    </div>
+
+    <form id="patient-form" ng-submit="controller.save()">
+
+        <div class="form-group">
+            <label for="patient-name">Imię</label>
+            <input style="width: 400px;" class="form-control" id="patient-name" ng-model="controller.patient.name"/>
+        </div>
+
+        <div class="form-group">
+            <label for="patient-surname">Nazwisko</label>
+            <input style="width: 400px;" class="form-control" id="patient-surname"
+                   ng-model="controller.patient.surname"/>
+        </div>
+
+        <div class="form-group">
+            <label for="patient-pesel">Pesel</label>
+            <input style="width: 400px;" class="form-control" id="patient-pesel" ng-model="controller.patient.pesel"/>
+        </div>
+
+        <div class="form-group">
+            <label for="patient-contact">Kontakt</label>
+            <input style="width: 400px;" class="form-control" id="patient-contact"
+                   ng-model="controller.patient.contact"/>
+        </div>
+    </form>
+
+    <button class="btn btn-info" type="submit" form="patient-form">Dodaj</button>
+    <div>
+        <br>
+        <br>
+    </div>
+</div>

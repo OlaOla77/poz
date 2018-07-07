@@ -1,0 +1,29 @@
+<h3>Lista badań dostępnych w ramach POZ</h3>
+<div class="section">
+    <div>
+        <br>
+    </div>
+
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Nazwa badania</th>
+            <th>Cena</th>
+            <th>Opcje</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="examination in controller.examinations">
+            <td>{{examination.name}}</td>
+            <td>{{examination.price}}</td>
+            <td>
+                <button class="btn btn-info" ng-click="controller.viewExamination(examination.id)">Edytuj</button>
+                <button class="btn btn-danger" ng-click="controller.deleteExamination(examination.id)">Usuń</button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <div>
+        <br>
+    </div>
+</div>

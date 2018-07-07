@@ -1,0 +1,53 @@
+<h3>Lista pacjentów</h3>
+<div class="section">
+    <div>
+        <br>
+    </div>
+
+    <form class="form-inline my-2 my-lg-0" name="search-patient" ng-submit="controller.params.search()">
+        <input class="form-control mr-sm-2" ng-model="controller.params.surname" type="search"
+               placeholder="Szukaj po nazwisku" aria-label="Search">
+        <button class="btn btn-secondary" type="submit">Szukaj</button>
+    </form>
+
+    <div>
+        <br>
+    </div>
+
+    <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Szukaj po peselu" aria-label="Search">
+        <button class="btn btn-secondary" type="submit">Szukaj</button>
+    </form>
+    <div>
+        <br>
+    </div>
+
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Nazwisko pacjenta</th>
+            <th>Imię pacjenta</th>
+            <th>Pesel</th>
+            <th>Kontakt</th>
+            <th>Opcje</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="patient in controller.patientList | orderBy: 'surname'">
+            <td>{{patient.surname}}</td>
+            <td>{{patient.name}}</td>
+            <td>{{patient.pesel}}</td>
+            <td>{{patient.contact}}</td>
+            <td>
+                <button class="btn btn-warning" ng-click="controller.goToAppointments(patient.id)">Historia wizyt
+                </button>
+                <button class="btn btn-info" ng-click="controller.viewPatient(patient.id)">Edytuj</button>
+                <button class="btn btn-danger" ng-click="controller.deletePatient(patient.id)">Usuń</button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <div>
+        <br>
+    </div>
+</div>
