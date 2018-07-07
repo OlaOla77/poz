@@ -1,5 +1,6 @@
 angular.module('examination-view')
-    .controller('ExaminationViewController', function (examination, examinationService, $location) {
+    .controller('ExaminationViewController',
+        function (examination, examinationService, $location) {
 
     var controller = this;
 

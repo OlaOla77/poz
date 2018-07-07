@@ -1,19 +1,18 @@
 angular
-    .module('appointment-add')
-    .controller('AppointmentAddController',
-        function (appointmentService, $location, appointment, examinations) {
+    .module('appointment-view')
+    .controller('AppointmentViewController',
+        function (appointment, $location, appointmentService,  examinations) {
 
             var controller = this;
 
-            controller.appointment = {};
-
+            controller.appointment = appointment;
             controller.examinations = examinations;
-
-            controller.save = save;
             controller.addExamination = addExamination;
 
-            function save() {
-                appointmentService.create(controller.appointment).then(function () {
+            controller.update = update;
+
+            function update() {
+                appointmentService.update(controller.appointment).then(function () {
                     $location.path('/appointments')
                 });
             }
@@ -22,5 +21,5 @@ angular
                 controller.appointment.examinations.push(controller.selectedExamination);
             }
 
-        }
-    );
+        });
+

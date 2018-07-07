@@ -1,0 +1,61 @@
+<h3>Pacjent: Imię nazwisko pacjenta</h3>
+<div class="section">
+    <div>
+        <br>
+    </div>
+
+    <form id="appointment-form" ng-submit="controller.update()">
+
+        <div class="form-group">
+            <label for="date">Data</label>
+            <input style="width:400px;" type="datetime-local" class="form-control"
+                   ng-model="controller.appointment.date" id="date">
+        </div>
+        <div class="form-group">
+            <label for="description">Opis</label>
+            <input style="width:400px; height: 200px;" class="form-control" ng-model="controller.appointment.description" id="description"/>
+        </div>
+    </form>
+
+    <form class="form-inline" id="appointment-examination-form" ng-submit="controller.addExamination()">
+        <div class="form-group">
+            <label for="examination">Badanie</label><br>
+            <select style="width: 400px;" id="examination" class="form-control"
+                    ng-options="examination.name for examination in controller.examinations"
+                    ng-model="controller.selectedExamination"></select>
+            <button class="btn btn-success" type="submit">Dodaj badanie</button>
+            <br>
+        </div>
+    </form>
+
+    <div>
+        <br>
+    </div>
+
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Nazwa</th>
+            <th>Cena</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="examination in controller.appointment.examinations">
+            <td>{{examination.name}}</td>
+            <td>{{examination.price}}</td>
+            <td>
+                <button class="btn btn-danger" ng-click="controller.removeExamination()">Usuń</button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <div>
+        <br>
+    </div>
+
+    <button class="btn brn-info" type="submit" form="appointment-form">Zapisz wizytę</button>
+    <div>
+        <br>
+    </div>
+</div>
