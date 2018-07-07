@@ -6,7 +6,7 @@ angular.module('patient-list')
         controller.viewPatient = view;
         controller.deletePatient = remove;
         controller.goToAppointments = goToAppointments;
-        // controller.searchBySurname = searchBySurname;
+        controller.searchBySurname = searchBySurname;
 
         controller.params = $routeParams;
 

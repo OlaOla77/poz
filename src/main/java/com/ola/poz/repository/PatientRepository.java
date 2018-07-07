@@ -13,7 +13,7 @@ public interface PatientRepository extends JpaRepository<Patient, Long> {
     Boolean existsByPesel(Long pesel);
 
     List<Patient> findBySurnameContainingIgnoreCase(String surname);
-//
+
 //    List<Patient> findByPeselContaining(Long pesel);
 
 }
