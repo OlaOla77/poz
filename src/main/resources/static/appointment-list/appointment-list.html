@@ -7,6 +7,7 @@
     <br>
 </div>
 <div class="section">
+
     <div>
         <br>
     </div>
@@ -22,7 +23,19 @@
         <tbody>
         <tr ng-repeat-start="appointment in controller.appointmentList">
             <td>{{appointment.date | date}}</td>
-            <td>{{appointment.description}}</td>
+
+            <td width="400px">
+                <button class="btn btn-warning" type="button" data-toggle="collapse" data-target="#{{appointment.id}}"
+                        aria-expanded="false" aria-controls="{{appointment.id}}">
+                    Pokaż opis
+                </button>
+                <div class="collapse" id="{{appointment.id}}">
+                    <div class="card card-body">
+                        {{appointment.description}}
+                    </div>
+                </div>
+            </td>
+
             <td></td>
             <td>
                 <button class="btn btn-info" ng-click="controller.viewAppointment(appointment.id)">Edytuj</button>
@@ -34,4 +47,8 @@
         </tr>
         </tbody>
     </table>
+
+    <div>
+        <br>
+    </div>
 </div>
