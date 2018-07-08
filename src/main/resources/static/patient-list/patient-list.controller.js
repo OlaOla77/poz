@@ -13,7 +13,7 @@ angular.module('patient-list')
         search();
 
         function search() {
-            patientService.query().then(function(response) {
+            patientService.query(controller.params).then(function(response) {
                 controller.patientList = response;
             });
         }
