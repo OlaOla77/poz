@@ -9,11 +9,8 @@ angular.module('appointment-add')
                     return undefined;
                 },
                 examinations: function (examinationService) {
-                    return examinationService.query()
-                        .then(function (response) {
-                            return response.content;
-                        });
-                },
+                    return examinationService.query();
+                }
                 // patient: function (patientService, $route) {
                 //     return patientService.get($route.current.params.patientId);
                 // }
