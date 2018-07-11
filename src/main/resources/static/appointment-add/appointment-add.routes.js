@@ -11,9 +11,7 @@ angular.module('appointment-add')
                 examinations: function (examinationService) {
                     return examinationService.query();
                 }
-                // patient: function (patientService, $route) {
-                //     return patientService.get($route.current.params.patientId);
-                // }
+
             }
-        });
+        })
     });

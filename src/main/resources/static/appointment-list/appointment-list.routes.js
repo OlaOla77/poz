@@ -13,6 +13,7 @@ appointmentListModule.config(function($routeProvider) {
             patient: function(patientService, $route) {
                 return patientService.get($route.current.params.patientId);
             }
+
         }
     })
 });

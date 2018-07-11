@@ -1,7 +1,7 @@
 angular
     .module('appointment-view')
     .controller('AppointmentViewController',
-        function (appointment, $location, appointmentService,  examinations) {
+        function (appointment, $location, appointmentService, examinations) {
 
             var controller = this;
 
@@ -22,9 +22,8 @@ angular
                 controller.appointment.examinations.push(controller.selectedExamination);
             }
 
-            /////////////////////////////////////////////////////////////
             function removeExamination(x) {
-                controller.appointment.examinations.splice(x,1);
+                controller.appointment.examinations.splice(x, 1);
             }
 
         });
