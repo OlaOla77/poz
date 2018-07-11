@@ -36,7 +36,8 @@ public class PatientController {
 
     @GetMapping
     @ResponseStatus(HttpStatus.OK)
-    public List<Patient> read(@RequestParam (defaultValue = "") String surname){
+    public List<Patient> read(
+            @RequestParam (defaultValue = "") String surname){
         return patientRepository.findBySurnameContainingIgnoreCase(surname);
     }
 

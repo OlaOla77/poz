@@ -9,10 +9,7 @@ angular.module('appointment-view')
                     return appointmentService.get($route.current.params.appointmentId);
                 },
                 examinations: function (examinationService) {
-                    return examinationService.query()
-                        .then(function (response) {
-                            return response.content;
-                        });
+                    return examinationService.query();
                 },
                 // patient: function(patientService, $route) {
                 //     return patientService.get($route.current.params.patientId);

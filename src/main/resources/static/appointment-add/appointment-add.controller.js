@@ -5,7 +5,11 @@ angular
 
             var controller = this;
 
-            controller.appointment = {};
+            // controller.appointment = {};
+
+            controller.appointment = appointment ? appointment : {
+                examinations: []
+            };
 
             controller.examinations = examinations;
 

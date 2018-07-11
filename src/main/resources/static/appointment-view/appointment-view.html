@@ -45,7 +45,7 @@
             <td>{{examination.name}}</td>
             <td>{{examination.price}}</td>
             <td>
-                <button class="btn btn-danger" ng-click="controller.removeExamination()">Usuń</button>
+                <button class="btn btn-danger" ng-click="controller.removeExamination($index)">Usuń</button>
             </td>
         </tr>
         </tbody>

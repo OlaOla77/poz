@@ -6,7 +6,7 @@ angular.module('patient-list')
         controller.viewPatient = view;
         controller.deletePatient = remove;
         controller.goToAppointments = goToAppointments;
-        controller.searchBySurname = searchBySurname;
+        controller.searchByParam = searchByParam;
 
         controller.params = $routeParams;
 
@@ -32,7 +32,7 @@ angular.module('patient-list')
             $location.path('/appointments/' + id);
         }
 
-        function searchBySurname() {
+        function searchByParam() {
             $route.updateParams(controller.params);
             $route.reload();
         }

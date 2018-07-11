@@ -8,6 +8,7 @@ angular
             controller.appointment = appointment;
             controller.examinations = examinations;
             controller.addExamination = addExamination;
+            controller.removeExamination = removeExamination;
 
             controller.update = update;
 
@@ -19,6 +20,11 @@ angular
 
             function addExamination() {
                 controller.appointment.examinations.push(controller.selectedExamination);
+            }
+
+            /////////////////////////////////////////////////////////////
+            function removeExamination(x) {
+                controller.appointment.examinations.splice(x,1);
             }
 
         });

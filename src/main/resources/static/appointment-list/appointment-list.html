@@ -21,7 +21,7 @@
         </tr>
         </thead>
         <tbody>
-        <tr ng-repeat-start="appointment in controller.appointmentList">
+        <tr ng-repeat="appointment in controller.appointmentList">
             <td>{{appointment.date | date}}</td>
 
             <td width="400px">
@@ -35,16 +35,22 @@
                     </div>
                 </div>
             </td>
+            <td>
+                <table>
+                    <tr ng-repeat="examination in appointment.examinations | orderBy: 'name'">
+                        <td>{{examination.name}}</td>
+                    </tr>
+                </table>
+            </td>
 
-            <td></td>
             <td>
                 <button class="btn btn-info" ng-click="controller.viewAppointment(appointment.id)">Edytuj</button>
                 <button class="btn btn-danger" ng-click="controller.deleteAppointment(appointment.id)">Usuń</button>
             </td>
         </tr>
-        <tr ng-repeat="examination in appointment.examinationList" ng-repeat-end>
-            <td>{{examination.name}}</td>
-        </tr>
+        <!--<tr ng-repeat="examination in appointment.examinations | orderBy: 'name'" ng-repeat-end>-->
+        <!--<td>{{examination.name}}</td>-->
+        <!--</tr>-->
         </tbody>
     </table>
 
