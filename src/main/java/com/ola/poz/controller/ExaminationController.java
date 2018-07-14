@@ -23,31 +23,37 @@ public class ExaminationController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public Examination create(@RequestBody @Valid Examination examination, BindingResult bindingResult){
+    public Examination create(@RequestBody @Valid Examination examination, BindingResult bindingResult) {
         return examinationService.create(examination, bindingResult);
     }
 
     @GetMapping
     @ResponseStatus(HttpStatus.OK)
-    public List<Examination> read(){
-        return examinationRepository.findAll();
+    public List<Examination> read(@RequestParam (defaultValue = "") String name) {
+        return examinationRepository.findByNameContainingIgnoreCase(name);
     }
+
+//    @GetMapping
+//    @ResponseStatus(HttpStatus.OK)
+//    public List<Examination> read(){
+//        return examinationRepository.findAll();
+//    }
 
     @GetMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
-    public Examination get(@PathVariable Long id){
+    public Examination get(@PathVariable Long id) {
         return examinationService.getById(id);
     }
 
     @PutMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
-    public Examination update(@RequestBody @Valid Examination examination, @PathVariable Long id, BindingResult bindingResult){
+    public Examination update(@RequestBody @Valid Examination examination, @PathVariable Long id, BindingResult bindingResult) {
         return examinationService.update(examination, id, bindingResult);
     }
 
     @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void delete(@PathVariable Long id){
+    public void delete(@PathVariable Long id) {
         examinationService.delete(id);
     }
 }

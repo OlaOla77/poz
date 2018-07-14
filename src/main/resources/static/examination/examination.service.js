@@ -7,9 +7,13 @@ angular.module('examination')
             }
         });
 
-        service.query = function () {
-            return resource.query().$promise;
+        service.query = function (params) {
+            return resource.query(params).$promise;
         }
+
+        // service.query = function () {
+        //     return resource.query().$promise;
+        // }
 
         service.create = function (examination) {
             return resource.save(null, examination).$promise;

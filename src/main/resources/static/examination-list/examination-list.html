@@ -4,6 +4,16 @@
         <br>
     </div>
 
+    <form class="form-inline my-2 my-lg-0" name="search-examination" ng-submit="controller.searchByParam()">
+        <input class="form-control mr-sm-2" ng-model="controller.params.name" type="search"
+               placeholder="Szukaj po nazwie" aria-label="Search">
+        <button class="btn btn-secondary" type="submit">Szukaj</button>
+    </form>
+
+    <div>
+        <br>
+    </div>
+
     <table class="table table-striped">
         <thead>
         <tr>
