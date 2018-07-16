@@ -18,7 +18,7 @@ angular
 
             function save() {
                 appointmentService.create(controller.appointment).then(function() {
-                    $location.path('/appointments')
+                    $location.path('/appointments/' + patient.id)
                 });
             }
 
