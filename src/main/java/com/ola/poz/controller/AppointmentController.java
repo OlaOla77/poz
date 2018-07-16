@@ -28,7 +28,10 @@ public class AppointmentController {
 
     @GetMapping
     @ResponseStatus(HttpStatus.OK)
-    public List<Appointment> read(){
+    public List<Appointment> search(@RequestParam(required = false) Long patientId) {
+        if (null != patientId) {
+            return appointmentRepository.findByPatient_Id(patientId);
+        }
         return appointmentRepository.findAll();
     }
 

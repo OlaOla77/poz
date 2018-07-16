@@ -7,9 +7,6 @@ appointmentListModule.config(function($routeProvider) {
         controller: 'AppointmentListController',
         controllerAs: 'controller',
         resolve: {
-            appointment: function () {
-                return undefined;
-            },
             patient: function(patientService, $route) {
                 return patientService.get($route.current.params.patientId);
             }

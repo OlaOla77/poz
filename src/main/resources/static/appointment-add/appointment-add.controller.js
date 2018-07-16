@@ -1,23 +1,23 @@
 angular
     .module('appointment-add')
     .controller('AppointmentAddController',
-        function (appointmentService, $location, appointment, examinations) {
+        function (appointmentService, $location, patient, examinations) {
 
             var controller = this;
 
-            // controller.appointment = {};
-
-            controller.appointment = appointment ? appointment : {
-                examinations: []
+            controller.appointment = {
+                examinations: [],
+                patient: patient
             };
 
             controller.examinations = examinations;
+            controller.patient = patient;
 
             controller.save = save;
             controller.addExamination = addExamination;
 
             function save() {
-                appointmentService.create(controller.appointment).then(function () {
+                appointmentService.create(controller.appointment).then(function() {
                     $location.path('/appointments')
                 });
             }

@@ -12,5 +12,4 @@ public class PozApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(PozApplication.class, args);
 	}
-
 }

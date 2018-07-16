@@ -34,7 +34,4 @@ public class Patient {
 
     private Long contact;
 
-    @OneToMany(mappedBy = "patient")
-    private List<Appointment> appointments;
-
 }

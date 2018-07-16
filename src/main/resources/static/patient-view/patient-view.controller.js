@@ -9,7 +9,7 @@ angular.module('patient-view')
 
     function update() {
         patientService.update(controller.patient).then(function () {
-            $location.path('/patients')
+            $location.path('/patients');
         });
     }
 });

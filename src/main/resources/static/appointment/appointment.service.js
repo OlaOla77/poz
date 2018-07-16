@@ -7,23 +7,23 @@ angular.module('appointment')
             }
         });
 
-        service.query = function () {
-            return resource.query().$promise;
+        service.query = function(params) {
+            return resource.query(params).$promise;
         }
 
-        service.create = function (appointment) {
+        service.create = function(appointment) {
             return resource.save(null, appointment).$promise;
         }
 
-        service.get = function(id){
+        service.get = function(id) {
             return resource.get({appointmentId:id}).$promise;
         }
 
-        service.update = function (appointment) {
+        service.update = function(appointment) {
             return resource.update({appointmentId:appointment.id}, appointment).$promise;
         }
 
-        service.remove = function (id) {
+        service.remove = function(id) {
             return resource.remove({appointmentId:id}).$promise;
         }
 

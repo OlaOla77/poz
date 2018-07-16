@@ -1,5 +1,4 @@
-<h3>Pacjent: Imię nazwisko pacjenta</h3>
-<div>{{appointment.patient.name}}</div>
+<h3>Pacjent: {{controller.patient.surname}} {{controller.patient.name}}</h3>
 <div>
     <br>
 </div>
@@ -22,33 +21,28 @@
         </tr>
         </thead>
         <tbody>
-        <tr ng-repeat="appointment in controller.appointmentList">
-            <td>{{appointment.date | date}}</td>
+            <tr ng-repeat="appointment in controller.appointmentList">
+                <td>{{appointment.appointmentDate | date}}</td>
 
-            <td width="400px">
-                <button class="btn btn-warning" type="button" data-toggle="collapse" data-target="#{{appointment.id}}"
-                        aria-expanded="false" aria-controls="{{appointment.id}}">
-                    Pokaż opis
-                </button>
-                <div class="collapse" id="{{appointment.id}}">
-                    <div class="card card-body">
-                        {{appointment.description}}
+                <td width="400px">
+                    <button class="btn btn-warning" type="button" data-toggle="collapse" data-target="#{{appointment.id}}"
+                            aria-expanded="false" aria-controls="{{appointment.id}}">
+                        Pokaż opis
+                    </button>
+                    <div class="collapse" id="{{appointment.id}}">
+                        <div class="card card-body">
+                            {{appointment.description}}
+                        </div>
                     </div>
-                </div>
-            </td>
-            <td>
-                <table>
-                    <tr ng-repeat="examination in appointment.examinations | orderBy: 'name'">
-                        <td>{{examination.name}}</td>
-                    </tr>
-                </table>
-            </td>
+                </td>
 
-            <td>
-                <button class="btn btn-info" ng-click="controller.viewAppointment(appointment.id)">Edytuj</button>
-                <button class="btn btn-danger" ng-click="controller.deleteAppointment(appointment.id)">Usuń</button>
-            </td>
-        </tr>
+                <td></td>
+                <td>
+
+                    <button class="btn btn-info" ng-click="controller.viewAppointment(appointment.id)">Edytuj</button>
+                    <button class="btn btn-danger" ng-click="controller.deleteAppointment(appointment.id)">Usuń</button>
+                </td>
+            </tr>
         <!--<tr ng-repeat="examination in appointment.examinations | orderBy: 'name'" ng-repeat-end>-->
         <!--<td>{{examination.name}}</td>-->
         <!--</tr>-->
